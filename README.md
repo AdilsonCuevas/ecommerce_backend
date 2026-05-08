@@ -231,7 +231,3 @@ php artisan test
 - Los errores retornan estructura JSON con códigos de estado HTTP
 - La paginación usa query params `?page=1&per_page=15`
 - Los timestamps están en formato ISO 8601
-
-## Licencia
-
-MIT License
