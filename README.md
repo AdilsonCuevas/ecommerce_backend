@@ -6,12 +6,50 @@ API RESTful para tienda virtual construida con Laravel 12.0 y autenticación JWT
 
 Backend completo para una tienda virtual con gestión de usuarios, productos, carrito de compras y pedidos. Implementa una API RESTful con recursos anidados y autenticación mediante JWT.
 
-## Requisitos
+## STACK TECNOLOGICO
 
-- **PHP**: 8.2+
-- **Composer**: última versión
-- **PostgreSQL**: 14+ (o SQLite para desarrollo local)
-- **Extensiones PHP**: `pdo_pgsql`, `mbstring`, `openssl`, `json`, `curl`
+- Framework: Laravel 12.0
+- Base de datos: PostgreSQL con UUIDs
+- ORM: Eloquent
+- Autenticacion: JWT (tymon/jwt-auth 2.x)
+- Validacion: Form Requests
+- API: RESTful con recursos anidados
+- Servidor: PHP 8.3+
+- Composer para dependencias
+
+## CONVENCIONES DE CODIGO
+
+### Naming
+
+| Tipo | Naming | Ejemplo |
+|------|--------|---------|
+| Controladores | PascalCase + Controller | ProductController |
+| Modelos | PascalCase (singular) | Product |
+| Tablas | snake_case (plural) | products |
+| Migraciones | snake_case descriptiva | create_products_table |
+| Rutas | kebab-case | products.index |
+| Servicios | PascalCase + Service | ProductService |
+| Repositorios | PascalCase + Repository | ProductRepository |
+| Form Requests | PascalCase + Request | StoreProductRequest |
+| API Resources | PascalCase + Resource | ProductResource |
+| Middleware | PascalCase | JwtAuthenticate |
+| Traits | PascalCase | HasUuid |
+| Jobs | PascalCase | SendOrderEmailJob |
+| Events | PascalCase | OrderCreatedEvent |
+| Observers | PascalCase + Observer | ProductObserver |
+| Factories | PascalCase | ProductFactory |
+| Seeders | PascalCase + Seeder | ProductSeeder |
+
+### Codigo
+
+- PSR-12 para formato de codigo
+- 4 espacios para indentacion (no tabs)
+- Type hints obligatorios en metodos
+- Return types obligatorios
+- DocBlocks en metodos publicos
+- Tipos estrictos (strict_types declare)
+- Nullable types con ?
+- named arguments para parametros opcionales
 
 ## Instalación
 
